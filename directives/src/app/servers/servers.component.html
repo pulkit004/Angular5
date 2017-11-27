@@ -1,0 +1,6 @@
+	
+	<!-- Built in directive. Expects javascript notation. Can use camelCase or key property value. -->
+
+	<p [ngStyle] = "{backgroundColor: getColor()}"
+		[ngClass] = "{online: serverLive === 'online'}"
+	 class="mt-1 w-25">Server is {{getServerLive()}}.</p>

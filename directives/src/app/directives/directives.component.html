@@ -1,0 +1,28 @@
+<div class='container p-3'>
+	
+	<label>Server Name</label>
+	
+	<input type="text" name="text" class="form-control w-25" [(ngModel)] = "serverStatus">
+	
+	<p>{{serverStatus}}</p>
+	
+	<button class="btn btn-primary mt-2" (click)="onServerCreation()" [disabled]="serverStatus===''">Add Server</button>
+	
+	<!-- <p>{{serverCreation}}</p> -->
+
+	<!-- ngIf Directive-structural directive -->
+	<p *ngIf="serverCreation">Server is created. Server name is {{serverStatus}}</p>
+
+
+	<!-- <p *ngIf="serverCreation; else noServer">Server is created. Server name is {{serverStatus}}</p> -->
+
+	<!-- <ng-template #noServer>
+
+		<p>No Server Created</p>
+		
+	</ng-template> -->
+
+
+	<app-servers *ngFor = "let server of serverNumber"></app-servers>
+
+</div>
