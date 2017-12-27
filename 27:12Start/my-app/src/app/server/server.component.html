@@ -1,0 +1,12 @@
+<!-- String Interpolation  -->
+
+
+<!-- Attribute Directives => ngStyle -->
+<!-- Attribure Directive => ngClass -->
+<div class="container">
+  <p 
+  [ngStyle]="{backgroundColor: getColor()}"
+  [ngClass]="{online: serverStatus === 'online'}">
+  Server id is {{serveId}} with serverStats is {{ getServerStatus() }} 
+</p>
+</div>
